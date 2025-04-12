@@ -60,7 +60,7 @@ export class TwitterSearchClient {
 
     private engageWithSearchTermsLoop() {
         this.engageWithSearchTerms().then();
-        const randomMinutes = Math.floor(Math.random() * (120 - 60 + 1)) + 60;
+        const randomMinutes = Math.floor(Math.random() * (5)) + 5; // modify 5 minutes to 10 minutes
         elizaLogger.log(
             `Next twitter search scheduled in ${randomMinutes} minutes`
         );
@@ -135,7 +135,7 @@ export class TwitterSearchClient {
 
   Which tweet is the most interesting and relevant for Ruby to reply to? Please provide only the ID of the tweet in your response.
   Notes:
-    - Respond to English tweets only
+    - Respond to Chinese tweets only
     - Respond to tweets that don't have a lot of hashtags, links, URLs or images
     - Respond to tweets that are not retweets
     - Respond to tweets where there is an easy exchange of ideas to have with the user
